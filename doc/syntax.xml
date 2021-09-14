@@ -1,14 +1,19 @@
-<SETTINGS>
+<SETTINGS>										<!-- 以这个标签开始 -->
 <OPTIONS>
-	<WordDelimeters>" \t\n,/?LTGT;.:\"'{[}]~`%^AMP*()-+=!"</WordDelimeters>
-	<SpecialDelimiters>";.{}\n"</SpecialDelimiters>
-	<IntelliSenseChars>"."</IntelliSenseChars>
+	<WordDelimeters>" \t\n,/?LTGT;.:\"'{[}]~`%^AMP*()-+=!"</WordDelimeters>		<!-- 单词分隔符 -->
+	<SpecialDelimiters>";.{}\n"</SpecialDelimiters>					<!-- 特殊的分隔符列表，使用Ctrl+Left或Ctrl+Right跳跃 -->
+	<IntelliSenseChars>"._"</IntelliSenseChars>					<!-- 智能感知所使用的符号列表 -->
 </OPTIONS>
 <COLOR_DATA>
+	<EditTextColor>000000</EditTextColor>            	<!-- 指定文本的前景色 --> 
+    <EditBackColor>FFFFFF</EditBackColor>            	<!-- 指定文本的背景色 --> 
+	<SelTextColor>ffffff</SelTextColor>            		<!-- 所选文本的前景色 --> 
+	<SelBackColor>6699ff</SelBackColor>            		<!-- 所选文本的背景色 --> 
 	<KEYWORDS>
-		<Color>0000ff</Color>
-		<CaseSensitive>False</CaseSensitive>
-		<Keyword>KeyPress</Keyword>
+		<Color>0000ff</Color>				<!-- 关键字前景色 -->
+		<BackColor>FFFFFF</BackColor>			<!-- 关键字背景色 -->
+		<CaseSensitive>False</CaseSensitive>		<!-- 是否大小写敏感 -->
+		<Keyword>KeyPress</Keyword>			<!-- 关键字 -->
 		<Keyword>KeyDown</Keyword>
 		<Keyword>KeyUp</Keyword>
 		<Keyword>KeyPressH</Keyword>
@@ -17,6 +22,7 @@
 		<Keyword>KeyPressS</Keyword>
 		<Keyword>KeyDownS</Keyword>
 		<Keyword>KeyUpS</Keyword>
+		<Keyword>KeyGroup</Keyword>
 		<Keyword>WaitKey</Keyword>
 		<Keyword>GetLastKey</Keyword>
 		<Keyword>LeftClick</Keyword>
@@ -58,6 +64,8 @@
 		<Keyword>UnlockMouse</Keyword>
 		<Keyword>GetCursorPos</Keyword>
 		<Keyword>GetCursorShape</Keyword>
+		<Keyword>SetEnv</Keyword>
+		<Keyword>GetEnv</Keyword>
 		<Keyword>MsgBox</Keyword>
 		<Keyword>Beep</Keyword>
 		<Keyword>Import</Keyword>
@@ -133,7 +141,7 @@
 		<Keyword>GetThreadID</Keyword> 
 		<Keyword>Plugin</Keyword>
 		<Keyword>Lib</Keyword>
-		<Keyword>Libe</Keyword>
+		<Keyword>LibE</Keyword>
 		<Keyword>File</Keyword>
 		<Keyword>Pic</Keyword>
 		<Keyword>Msg</Keyword>
@@ -150,20 +158,399 @@
 		<Keyword>Console</Keyword>
 		<Keyword>BkgndColor</Keyword>
 		<Keyword>GetSysInfo</Keyword>
-		<Keyword>GetMacroID</Keyword>
-		<Keyword>GetExeDir</Keyword>
+		<Keyword>Clng</Keyword>
+		<Keyword>DropList</Keyword>
+		<Keyword>Abs</Keyword>
+		<Keyword>Atn</Keyword>
+		<Keyword>Cos</Keyword>
+		<Keyword>Exp</Keyword>
+		<Keyword>Fix</Keyword>
+		<Keyword>Int</Keyword>
+		<Keyword>Log</Keyword>
+		<Keyword>Oct</Keyword>
+		<Keyword>Sgn</Keyword>
+		<Keyword>Sin</Keyword>
+		<Keyword>Rnd</Keyword>
+		<Keyword>Round</Keyword>
+		<Keyword>Sqr</Keyword>
+		<Keyword>Tan</Keyword>
+		<Keyword>Asc</Keyword>
+		<Keyword>Chr</Keyword>
+		<Keyword>Hex</Keyword>
+		<Keyword>InStr</Keyword>
+		<Keyword>InStrRev</Keyword>
+		<Keyword>Join</Keyword>
+		<Keyword>LCase</Keyword>
+		<Keyword>Left</Keyword>
+		<Keyword>Len</Keyword>
+		<Keyword>LTrim</Keyword>
+		<Keyword>RTrim</Keyword>
+		<Keyword>Trim</Keyword>
+		<Keyword>Mid</Keyword>
+		<Keyword>Replace</Keyword>
+		<Keyword>Right</Keyword>
+		<Keyword>Space</Keyword>
+		<Keyword>StrComp</Keyword>
+		<Keyword>StrReverse</Keyword>
+		<Keyword>String</Keyword>
+		<Keyword>UCase</Keyword>
+		<Keyword>Array</Keyword>
+		<Keyword>Filter</Keyword>
+		<Keyword>LBound</Keyword>
+		<Keyword>Split</Keyword>
+		<Keyword>UBound</Keyword>
+		<Keyword>CBool</Keyword>
+		<Keyword>CByte</Keyword>
+		<Keyword>CCur</Keyword>
+		<Keyword>CDate</Keyword>
+		<Keyword>vbCrLf</Keyword>
+		<Keyword>eeye</Keyword>
+		<Keyword>takeqq</Keyword>
+		<Keyword>Video</Keyword>
+		<Keyword>DelayS</Keyword>
+		<Keyword>Timer</Keyword>
+		<Keyword>Popup</Keyword>
+		<Keyword>Preserve</Keyword>
+		<Keyword>Nothing</Keyword>
+		<Keyword>Execute</Keyword>
+		<Keyword>RGB</Keyword>
+		<Keyword>Date</Keyword>
+		<Keyword>DateAdd</Keyword>
+		<Keyword>DateDiff</Keyword>
+		<Keyword>DatePart</Keyword>
+		<Keyword>DateSerial</Keyword>
+		<Keyword>DateValue</Keyword>
+		<Keyword>Day</Keyword>
+		<Keyword>Hour</Keyword>
+		<Keyword>Minute</Keyword>
+		<Keyword>Month</Keyword>
+		<Keyword>MonthName</Keyword>
+		<Keyword>Now</Keyword>
+		<Keyword>Second</Keyword>
+		<Keyword>Time</Keyword>
+		<Keyword>TimeSerial</Keyword>
+		<Keyword>TimeValue</Keyword>
+		<Keyword>Weekday</Keyword>
+		<Keyword>WeekdayName</Keyword>
+		<Keyword>Year</Keyword>
+		<Keyword>Createobject</Keyword>
+		<Keyword>Eval</Keyword>
+		<Keyword>FormatCurrency</Keyword>
+		<Keyword>FormatDateTime</Keyword>
+		<Keyword>FormatNumber</Keyword>
+		<Keyword>FormatPercent</Keyword>
+		<Keyword>GetObject</Keyword>
+		<Keyword>InputBox</Keyword>
+		<Keyword>IsArray</Keyword>
+		<Keyword>IsDate</Keyword>
+		<Keyword>IsEmpty</Keyword>
+		<Keyword>IsNull</Keyword>
+		<Keyword>IsNumeric</Keyword>
+		<Keyword>IsObject</Keyword>
+		<Keyword>LoadPicture</Keyword>
+		<Keyword>ScriptEngine</Keyword>
+		<Keyword>ScriptEngineBuildVersion</Keyword>
+		<Keyword>ScriptEngineMajorVersion</Keyword>
+		<Keyword>ScriptEngineMinorVersion</Keyword>
+		<Keyword>TypeName</Keyword>
+		<Keyword>VarType</Keyword>
+		<Keyword>Add</Keyword>
+		<Keyword>Not</Keyword>
+		<Keyword>Is</Keyword>
+		<Keyword>Imp</Keyword>
+		<Keyword>Xor</Keyword>
+		<Keyword>Eqv</Keyword>
+		<Keyword>UnEscape</Keyword>
+		<Keyword>Escape</Keyword>
+		<Keyword>Execute</Keyword>
+		<Keyword>CStr</Keyword>
+		<Keyword>Randomize</Keyword>
+		<Keyword>CInt</Keyword>
+		<Keyword>vbBinaryCompare</Keyword>
+		<Keyword>vbTextCompare</Keyword>
+		<Keyword>vbDatabaseCompare</Keyword>
+		<Keyword>vbCr</Keyword>
+		<Keyword>vbFormFeed</Keyword>
+		<Keyword>vbLf</Keyword>
+		<Keyword>vbNewLine</Keyword>
+		<Keyword>vbNullChar</Keyword>
+		<Keyword>vbNullString</Keyword>
+		<Keyword>vbTab</Keyword>
+		<Keyword>vbVerticalTab</Keyword>
+		<Keyword>GetmacroID</Keyword>
+		<Keyword>CDbl</Keyword>
+		<Keyword>CSng</Keyword>
+		<Keyword>LenB</Keyword>
+		<Keyword>LeftB</Keyword>
+		<Keyword>RightB</Keyword>
+		<Keyword>MidB</Keyword>
+		<Keyword>InStrB</Keyword>
+		<Keyword>AscB</Keyword>
+		<Keyword>ChrB</Keyword>
+		<Keyword>AscW</Keyword>
+		<Keyword>ChrW</Keyword>
+		<Keyword>ExecuteGlobal</Keyword>
+		<Keyword>GetRef</Keyword>
+		<Keyword>ByRef</Keyword>
+		<Keyword>ByVal</Keyword>
+		<Keyword>Class</Keyword>
+		<Keyword>Currency</Keyword>
+		<Keyword>Debug</Keyword>
+		<Keyword>Empty</Keyword>
+		<Keyword>EndIf</Keyword>
+		<Keyword>Enum</Keyword>
+		<Keyword>Null</Keyword>
+		<Keyword>On</Keyword>
+		<Keyword>Option</Keyword>
+		<Keyword>Optional</Keyword>
+		<Keyword>ParamArray</Keyword>
+		<Keyword>RaiseEvent</Keyword>
+		<Keyword>Resume</Keyword>
+		<Keyword>RSet</Keyword>
+		<Keyword>Shared</Keyword>
+		<Keyword>Static</Keyword>
+		<Keyword>Stop</Keyword>
+		<Keyword>Type</Keyword>
+		<Keyword>TypeOf</Keyword>
+		<Keyword>Variant</Keyword>
+		<Keyword>Error</Keyword>
+		<Keyword>Explicit</Keyword>
+        <Keyword>GetExeDir</Keyword>
+		<Keyword>GetScreenResolution</Keyword>
+		<Keyword>QMLibrary</Keyword>
+		<Keyword>QUIMethodObj</Keyword>
 	</KEYWORDS>
-	<BLOCKS>
+	<WORDS>    <!-- 也是关键字，但可单独指定颜色 -->
+		<WORD>
+			<Val>dm</Val>                        	<!-- 关键字 --> 
+			<Color>ff00ff</Color>                   <!-- 关键字前景色 --> 
+			<BackColor>FFFFFF</BackColor>           <!-- 关键字背景色 --> 
+			<CaseSensitive>false</CaseSensitive>    <!-- 是否大小写敏感 -->
+		</WORD>
+		<WORD>
+			<Val>dll</Val>                        	<!-- 关键字 --> 
+			<Color>00ff00</Color>                   <!-- 关键字前景色 --> 
+			<BackColor>FFFFFF</BackColor>           <!-- 关键字背景色 --> 
+			<CaseSensitive>false</CaseSensitive>    <!-- 是否大小写敏感 -->
+		</WORD>
+		<WORD>
+			<Val>0</Val>                        	<!-- 关键字 --> 
+			<Color>FF6100</Color>                   <!-- 关键字前景色 --> 
+			<BackColor>FFFFFF</BackColor>           <!-- 关键字背景色 --> 
+			<CaseSensitive>false</CaseSensitive>    <!-- 是否大小写敏感 -->
+		</WORD>
+		<WORD>
+			<Val>1</Val>                        	<!-- 关键字 --> 
+			<Color>FF6100</Color>                   <!-- 关键字前景色 --> 
+			<BackColor>FFFFFF</BackColor>           <!-- 关键字背景色 --> 
+			<CaseSensitive>false</CaseSensitive>    <!-- 是否大小写敏感 -->
+		</WORD>
+		<WORD>
+			<Val>2</Val>                        	<!-- 关键字 --> 
+			<Color>FF6100</Color>                   <!-- 关键字前景色 --> 
+			<BackColor>FFFFFF</BackColor>           <!-- 关键字背景色 --> 
+			<CaseSensitive>false</CaseSensitive>    <!-- 是否大小写敏感 -->
+		</WORD>
+		<WORD>
+			<Val>3</Val>                        	<!-- 关键字 --> 
+			<Color>FF6100</Color>                   <!-- 关键字前景色 --> 
+			<BackColor>FFFFFF</BackColor>           <!-- 关键字背景色 --> 
+			<CaseSensitive>false</CaseSensitive>    <!-- 是否大小写敏感 -->
+		</WORD>
+		<WORD>
+			<Val>4</Val>                        	<!-- 关键字 --> 
+			<Color>FF6100</Color>                   <!-- 关键字前景色 --> 
+			<BackColor>FFFFFF</BackColor>           <!-- 关键字背景色 --> 
+			<CaseSensitive>false</CaseSensitive>    <!-- 是否大小写敏感 -->
+		</WORD>
+		<WORD>
+			<Val>5</Val>                        	<!-- 关键字 --> 
+			<Color>FF6100</Color>                   <!-- 关键字前景色 --> 
+			<BackColor>FFFFFF</BackColor>           <!-- 关键字背景色 --> 
+			<CaseSensitive>false</CaseSensitive>    <!-- 是否大小写敏感 -->
+		</WORD>
+		<WORD>
+			<Val>6</Val>                        	<!-- 关键字 --> 
+			<Color>FF6100</Color>                   <!-- 关键字前景色 --> 
+			<BackColor>FFFFFF</BackColor>           <!-- 关键字背景色 --> 
+			<CaseSensitive>false</CaseSensitive>    <!-- 是否大小写敏感 -->
+		</WORD>
+		<WORD>
+			<Val>7</Val>                        	<!-- 关键字 --> 
+			<Color>FF6100</Color>                   <!-- 关键字前景色 --> 
+			<BackColor>FFFFFF</BackColor>           <!-- 关键字背景色 --> 
+			<CaseSensitive>false</CaseSensitive>    <!-- 是否大小写敏感 -->
+		</WORD>
+		<WORD>
+			<Val>8</Val>                        	<!-- 关键字 --> 
+			<Color>FF6100</Color>                   <!-- 关键字前景色 --> 
+			<BackColor>FFFFFF</BackColor>           <!-- 关键字背景色 --> 
+			<CaseSensitive>false</CaseSensitive>    <!-- 是否大小写敏感 -->
+		</WORD>
+		<WORD>
+			<Val>9</Val>                        	<!-- 关键字 --> 
+			<Color>FF6100</Color>                   <!-- 关键字前景色 --> 
+			<BackColor>FFFFFF</BackColor>           <!-- 关键字背景色 --> 
+			<CaseSensitive>false</CaseSensitive>    <!-- 是否大小写敏感 -->
+		</WORD>
+		<WORD>
+			<Val>16</Val>                        	<!-- 关键字 --> 
+			<Color>FF6100</Color>                   <!-- 关键字前景色 --> 
+			<BackColor>FFFFFF</BackColor>           <!-- 关键字背景色 --> 
+			<CaseSensitive>false</CaseSensitive>    <!-- 是否大小写敏感 -->
+		</WORD>
+		<WORD>
+			<Val>32</Val>                        	<!-- 关键字 --> 
+			<Color>FF6100</Color>                   <!-- 关键字前景色 --> 
+			<BackColor>FFFFFF</BackColor>           <!-- 关键字背景色 --> 
+			<CaseSensitive>false</CaseSensitive>    <!-- 是否大小写敏感 -->
+		</WORD>
+		<WORD>
+			<Val>48</Val>                        	<!-- 关键字 --> 
+			<Color>FF6100</Color>                   <!-- 关键字前景色 --> 
+			<BackColor>FFFFFF</BackColor>           <!-- 关键字背景色 --> 
+			<CaseSensitive>false</CaseSensitive>    <!-- 是否大小写敏感 -->
+		</WORD>
+		<WORD>
+			<Val>64</Val>                        	<!-- 关键字 --> 
+			<Color>FF6100</Color>                   <!-- 关键字前景色 --> 
+			<BackColor>FFFFFF</BackColor>           <!-- 关键字背景色 --> 
+			<CaseSensitive>false</CaseSensitive>    <!-- 是否大小写敏感 -->
+		</WORD>
+		<WORD>
+			<Val>256</Val>                        	<!-- 关键字 --> 
+			<Color>FF6100</Color>                   <!-- 关键字前景色 --> 
+			<BackColor>FFFFFF</BackColor>           <!-- 关键字背景色 --> 
+			<CaseSensitive>false</CaseSensitive>    <!-- 是否大小写敏感 -->
+		</WORD>
+		<WORD>
+			<Val>512</Val>                        	<!-- 关键字 --> 
+			<Color>FF6100</Color>                   <!-- 关键字前景色 --> 
+			<BackColor>FFFFFF</BackColor>           <!-- 关键字背景色 --> 
+			<CaseSensitive>false</CaseSensitive>    <!-- 是否大小写敏感 -->
+		</WORD>
+		<WORD>
+			<Val>768</Val>                        	<!-- 关键字 --> 
+			<Color>FF6100</Color>                   <!-- 关键字前景色 --> 
+			<BackColor>FFFFFF</BackColor>           <!-- 关键字背景色 --> 
+			<CaseSensitive>false</CaseSensitive>    <!-- 是否大小写敏感 -->
+		</WORD>
+		<WORD>
+			<Val>1024</Val>                        	<!-- 关键字 --> 
+			<Color>FF6100</Color>                   <!-- 关键字前景色 --> 
+			<BackColor>FFFFFF</BackColor>           <!-- 关键字背景色 --> 
+			<CaseSensitive>false</CaseSensitive>    <!-- 是否大小写敏感 -->
+		</WORD>
+		<WORD>
+			<Val>4096</Val>                        	<!-- 关键字 --> 
+			<Color>FF6100</Color>                   <!-- 关键字前景色 --> 
+			<BackColor>FFFFFF</BackColor>           <!-- 关键字背景色 --> 
+			<CaseSensitive>false</CaseSensitive>    <!-- 是否大小写敏感 -->
+		</WORD>
+		<WORD>
+			<Val>8192</Val>                        	<!-- 关键字 --> 
+			<Color>FF6100</Color>                   <!-- 关键字前景色 --> 
+			<BackColor>FFFFFF</BackColor>           <!-- 关键字背景色 --> 
+			<CaseSensitive>false</CaseSensitive>    <!-- 是否大小写敏感 -->
+		</WORD>
+		<WORD>
+			<Val>"="</Val>
+			<Color>B5BE10</Color>
+			<BackColor>FFFFFF</BackColor>
+			<CaseSensitive>false</CaseSensitive>
+		</WORD>
+		<WORD>
+			<Val>LT</Val>
+			<Color>B5BE10</Color>
+			<BackColor>FFFFFF</BackColor>
+			<CaseSensitive>false</CaseSensitive>
+		</WORD>
+		<WORD>
+			<Val>GT</Val>
+			<Color>B5BE10</Color>
+			<BackColor>FFFFFF</BackColor>
+			<CaseSensitive>false</CaseSensitive>
+		</WORD>
+		<WORD>
+			<Val>AMP</Val>
+			<Color>B5BE10</Color>
+			<BackColor>FFFFFF</BackColor>
+			<CaseSensitive>false</CaseSensitive>
+		</WORD>
+		<WORD>
+			<Val>:</Val>
+			<Color>B5BE10</Color>
+			<BackColor>FFFFFF</BackColor>
+			<CaseSensitive>false</CaseSensitive>
+		</WORD>
+		<WORD>
+			<Val>_</Val>
+			<Color>B5BE10</Color>
+			<BackColor>FFFFFF</BackColor>
+			<CaseSensitive>false</CaseSensitive>
+		</WORD>
+		<WORD>
+			<Val>%</Val>
+			<Color>B5BE10</Color>
+			<BackColor>FFFFFF</BackColor>
+			<CaseSensitive>false</CaseSensitive>
+		</WORD>
+		<WORD>
+			<Val>^</Val>
+			<Color>B5BE10</Color>
+			<BackColor>FFFFFF</BackColor>
+			<CaseSensitive>false</CaseSensitive>
+		</WORD>
+		<WORD>
+			<Val>"+"</Val>
+			<Color>B5BE10</Color>
+			<BackColor>FFFFFF</BackColor>
+			<CaseSensitive>false</CaseSensitive>
+		</WORD>
+		<WORD>
+			<Val>-</Val>
+			<Color>B5BE10</Color>
+			<BackColor>FFFFFF</BackColor>
+			<CaseSensitive>false</CaseSensitive>
+		</WORD>
+		<WORD>
+			<Val>*</Val>
+			<Color>B5BE10</Color>
+			<BackColor>FFFFFF</BackColor>
+			<CaseSensitive>false</CaseSensitive>
+		</WORD>
+		<WORD>
+			<Val>/</Val>
+			<Color>B5BE10</Color>
+			<BackColor>FFFFFF</BackColor>
+			<CaseSensitive>false</CaseSensitive>
+		</WORD>
+		<WORD>
+			<Val>(</Val>
+			<Color>B5BE10</Color>
+			<BackColor>FFFFFF</BackColor>
+			<CaseSensitive>false</CaseSensitive>
+		</WORD>
+		<WORD>
+			<Val>)</Val>
+			<Color>B5BE10</Color>
+			<BackColor>FFFFFF</BackColor>
+			<CaseSensitive>false</CaseSensitive>
+		</WORD>
+	</WORDS>
+	<BLOCKS>    <!-- 颜色块列表 -->
 		<BLOCK>
-			<Start>"</Start>
-			<End>"</End>
-			<Color>"darkgray"</Color>
-			<WholeText>false</WholeText>
+			<Start>"</Start>			            <!-- 指定打开块格局 -->
+			<End>"</End>				            <!-- 指定关闭块格局，单行注释为空 -->
+			<Color>"darkgray"</Color>		        <!-- 块前景色 "darkgray"-->
+			<BackColor>FFFFFF</BackColor>           <!-- 块背景色 -->
+			<WholeText>false</WholeText>		    <!-- 块是否多行的，只能定义一个块的WholeText为真 -->
+			<CaseSensitive>false</CaseSensitive>	<!-- 是否大小写敏感 -->
 		</BLOCK>
 		<BLOCK>
 			<Start>/*</Start>
 			<End>*/</End>
-			<Color>"darkgreen"</Color>
+			<Color>"darkgreen"</Color>			    <!--"darkgreen"-->
 			<WholeText>true</WholeText>
 		</BLOCK>
 		<BLOCK>
@@ -215,7 +602,19 @@
 					<ReplaceString>Exit Event...</ReplaceString>
 					<Ignore>True</Ignore>
 				</BLOCK>
-        <BLOCK>
+    <BLOCK>
+		<Start>/====</Start>
+		<End>====/</End>
+	</BLOCK>
+    <BLOCK>
+		<Start>Class</Start>
+		<End>End Class</End>
+	</BLOCK>
+    <BLOCK>
+		<Start>Type</Start>
+		<End>End Type</End>
+	</BLOCK>
+	<BLOCK>
             <Start>While</Start>
             <End>Wend</End>
             <ReplaceString>While...</ReplaceString>
@@ -253,18 +652,14 @@
             <End>VBSEnd</End>
             <ReplaceString>VBSBegin...VBSEnd</ReplaceString>
         </BLOCK>
-        <BLOCK>
-            <Start>Select</Start>
-            <End>End Select</End>
-            <ReplaceString>Select...</ReplaceString>
-        </BLOCK>
     </BLOCKS>
 </OUTLINE_DATA>
 <HYPERLINKS>
     <EnableHyperlinkSupport>True</EnableHyperlinkSupport>
     <HighlightWithColor>True</HighlightWithColor>
-    <URLPrefixes>
+    <URLPrefixes>    <!-- 网络协议头高亮 -->
         <URLPrefix>http://</URLPrefix>
+		<URLPrefix>https://</URLPrefix>
         <URLPrefix>ftp://</URLPrefix>
         <URLPrefix>mailto:</URLPrefix>
         <URLPrefix>file://</URLPrefix>
