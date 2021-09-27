@@ -7,11 +7,7 @@ MacroID=652ab43d-d143-47d0-819d-61745b09cade
 '======================================[需要脚本定制可以找我]======================================
 '【神梦多线程命令库】
 '版本：v1.5
-<<<<<<< HEAD
-'更新：2021.09.15
-=======
 '更新：2021.09.27
->>>>>>> my_recovery_branch
 '作者：神梦无痕
 'ＱＱ：1042207232
 'Ｑ群：624655641
@@ -721,21 +717,12 @@ Function _初始化()
     当前版本 = "1.5"
     '-----------------------------------------------------------
     If DimEnv_Thread_Init = "" Then
-<<<<<<< HEAD
-    	Import "Msg.dll"
-    	Import "Sys.dll"
-    	Import "Window.dll"
-    	DimEnv_Thread_Tally = 0
-    	DimEnv_Thread_NewTips = "无需更新！"
-    	Execute _
-=======
         Import "Msg.dll"
         Import "Sys.dll"
         Import "Window.dll"
         DimEnv_Thread_Tally = 0
         DimEnv_Thread_NewTips = "无需更新！"
         Execute _
->>>>>>> my_recovery_branch
     	"On Error Resume Next:" & _
     	"Set Window = CreateObject(""QMPlugin.Window""):" & _
     	"If Window.Search(""按键精灵"") <> """" Then:" & _
@@ -792,10 +779,6 @@ Function _初始化()
 End Function
 
 /*〓〓〓〓〓〓〓〓【更新历史】〓〓〓〓〓〓〓〓
-<<<<<<< HEAD
-神梦_多线程v1.5 2021.09.15
-\
-=======
 神梦_多线程v1.5 2021.09.27
 \
 |-- 新增 协程_添加() 命令
@@ -807,7 +790,6 @@ End Function
 |-- 新增 回调函数_返回() 命令
 |-- 新增 回调函数_取参数() 命令
 |-- 新增 回调函数_置参数() 命令
->>>>>>> my_recovery_branch
 |-- 修复 生成小精灵后，必须打开按键精灵编辑器才能初始化问题
 |-- 修复 线程_取当前ID() 命令，无法正确获取返回值问题 
 |

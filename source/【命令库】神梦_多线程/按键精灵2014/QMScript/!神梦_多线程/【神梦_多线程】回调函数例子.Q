@@ -10,7 +10,7 @@ RunOnce=1
 EnableWindow=
 MacroID=18c8ba5f-6d25-48cb-ab36-8372de06d80a
 Description=【神梦_多线程】回调函数例子
-Enable=1
+Enable=0
 AutoRun=0
 [Repeat]
 Type=0
